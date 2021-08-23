@@ -33,7 +33,7 @@
                             <!-- small card -->
                             <div class="small-box bg-info">
                               <div class="inner">
-                                <h3> Orang</h3>
+                                <h3>{{$pemains}} Orang</h3>
 
                                 <p>Total Pemain</p>
                               </div>
@@ -50,7 +50,7 @@
                             <!-- small card -->
                             <div class="small-box bg-success">
                               <div class="inner">
-                                <h3> Tim</h3>
+                                <h3>{{$tims}} Tim</h3>
 
                                 <p>Total Tim</p>
                               </div>

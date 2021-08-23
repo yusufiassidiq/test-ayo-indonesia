@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Tim;
+use App\Models\Pemain;
 
 class HomeController extends Controller
 {
@@ -27,6 +29,9 @@ class HomeController extends Controller
     }
     public function dashboard()
     {
-        return view('dashboard');
+
+        $tims = Tim::all()->count();
+        $pemains = Pemain::all()->count();
+        return view('dashboard',compact('tims','pemains'));
     }
 }
