@@ -13,6 +13,7 @@ class Tim extends Model
 
     protected $fillable = ['nama','logo','tahun_berdiri','alamat','kota'];
     protected $table = 'tims';
+    protected $dates = ['deleted_at'];
 
     public function pemain()
     {

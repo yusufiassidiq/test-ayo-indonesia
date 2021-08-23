@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pemain;
+use App\Models\Pencetak_Gol;
 use App\Models\Tim;
 use Illuminate\Http\Request;
 
@@ -125,8 +126,14 @@ class PemainController extends Controller
      * @param  \App\Models\Pemain  $pemain
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pemain $pemain)
+    public function destroy($id)
     {
-        //
+        $pemain = Pemain::findOrFail($id);
+        $pencetak_gol = Pencetak_Gol::findOrFail($id);
+        if($pencetak_gol){
+            return redirect()->back()->with(['failed' => 'Pemain ada di daftar pencetak gol, tidak bisa menghapus pemain!']);
+        }
+        $pemain->delete();
+        return redirect()->back()->with(['success' => 'Pemain berhasil dihapus!']);
     }
 }

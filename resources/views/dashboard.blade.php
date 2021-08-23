@@ -8,11 +8,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark tes">Data Tangkapan</h1>
+            <h1 class="m-0 text-dark tes">Data </h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Data Tangkapan</a></li>
+              <li class="breadcrumb-item"><a href="#">Data </a></li>
               <li class="breadcrumb-item active">List Data</li>
             </ol>
           </div><!-- /.col -->
@@ -35,7 +35,7 @@
                               <div class="inner">
                                 <h3> Orang</h3>
 
-                                <p>Total Nelayan</p>
+                                <p>Total Pemain</p>
                               </div>
                               <div class="icon">
                                 <i class="fas fa-ship"></i>
@@ -50,9 +50,9 @@
                             <!-- small card -->
                             <div class="small-box bg-success">
                               <div class="inner">
-                                <h3> Ton</h3>
+                                <h3> Tim</h3>
 
-                                <p>Total Bobot Tangkapan</p>
+                                <p>Total Tim</p>
                               </div>
                               <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
@@ -67,9 +67,9 @@
                             <!-- small card -->
                             <div class="small-box bg-warning">
                               <div class="inner">
-                                <h3> Rupiah</h3>
+                                <h3>Pemain</h3>
 
-                                <p>Harga Jual Tertinggi</p>
+                                <p>Pemain Terbaik</p>
                               </div>
                               <div class="icon">
                                 <i class="fas fa-balance-scale"></i>
@@ -84,9 +84,9 @@
                             <!-- small card -->
                             <div class="small-box bg-danger">
                               <div class="inner">
-                                <h3></h3>
+                                <h3>Tim</h3>
 
-                                <p>Nelayan Terbaik</p>
+                                <p>Tim Terbaik</p>
                               </div>
                               <div class="icon">
                                 <i class="fas fa-chart-pie"></i>
@@ -101,13 +101,13 @@
                     <!-- /.row -->
                 </div>
             </div>
-            <div class="card card-primary">
+            <!-- <div class="card card-primary">
               <div class="card-body">
                 <div class="chart">
                   <canvas id="bar-chart" style="height: 400px; max-height: 400px;"></canvas>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- general form elements -->
             <div class="card card-primary">
               <!-- <div class="card-header">

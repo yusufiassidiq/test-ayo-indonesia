@@ -38,11 +38,13 @@ Route::get('/get-list-tim-page', [TimController::class, 'index'])->name('getList
 Route::get('/add-tim-page', [TimController::class, 'create'])->name('addTimPage');
 Route::post('/store-tim', [TimController::class, 'store'])->name('storeTim');
 Route::patch('/update-tim',[TimController::class, 'update'])->name('updateTim');
+Route::get('/delete-tim/{id}',[TimController::class, 'destroy'])->name('deleteTim');
 
 Route::get('/get-list-pemain-page', [PemainController::class, 'index'])->name('getListPemainPage');
 Route::get('/add-pemain-page', [PemainController::class, 'create'])->name('addPemainPage');
 Route::post('/store-pemain', [PemainController::class, 'store'])->name('storePemain');
 Route::patch('/update-pemain',[PemainController::class, 'update'])->name('updatePemain');
+Route::get('/delete-pemain/{id}',[PemainController::class, 'destroy'])->name('deletePemain');
 
 Route::get('/get-list-jadwal-page', [JadwalController::class, 'index'])->name('getListJadwalPage');
 Route::get('/add-jadwal-page', [JadwalController::class, 'create'])->name('addJadwalPage');

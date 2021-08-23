@@ -157,8 +157,13 @@ class TimController extends Controller
      * @param  \App\Models\Tim  $tim
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tim $tim)
+    public function destroy($id)
     {
-        //
+        $tim = Tim::findOrFail($id);
+        if($tim->pemain){
+            return redirect()->back()->with(['failed' => 'Tim mempunyai daftar pemain, tidak bisa menghapus tim!']);
+        }
+        $tim->delete();
+        return redirect()->back()->with(['success' => 'Tim berhasil dihapus!']);
     }
 }

@@ -13,6 +13,7 @@ class Jadwal extends Model
 
     protected $fillable = ['tanggal','waktu','id_home','id_away'];
     protected $table = 'jadwals';
+    protected $dates = ['deleted_at'];
 
     public function hasil()
     {

@@ -89,6 +89,16 @@
                             <i class="fa fa-edit"></i> 
                             Edit
                           </a>
+                          <form id="delete-pemain-{{ $pemain->id }}" action="{{ route('deletePemain',$pemain->id) }}" style="display: none;" method="GET">
+                              @csrf
+                              @method('DELETE')
+                            </form>
+                            <button type="button" class="btn btn-danger" onclick="if(confirm('Are you sure? You want to delete this pemain?')){
+                              event.preventDefault();
+                              document.getElementById('delete-pemain-{{ $pemain->id }}').submit();
+                            } else {
+                              event.preventDefault();
+                            }"><i class="fa fa-trash"></i> </button>
                       </td>
                     </tr>
                         @endforeach

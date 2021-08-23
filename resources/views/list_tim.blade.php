@@ -28,7 +28,12 @@
               {{ $message }}
             </div>
             @endif
-
+            @if ($message = Session::get('failed'))
+            <div id="messageAlert" class="alert alert-danger alert-dismissible">
+              <h4><i class="icon fa fa-times"></i> Gagal!</h4>
+              {{ $message }}
+            </div>
+            @endif
             @if (count($errors) > 0)
             <div id="messageAlert" class="alert alert-danger alert-dismissible">
               <h4><i class="icon fa fa-close"></i> Gagal!</h4>
@@ -83,6 +88,16 @@
                             <i class="fa fa-edit"></i> 
                             Edit
                           </a>
+                          <form id="delete-tim-{{ $tim->id }}" action="{{ route('deleteTim',$tim->id) }}" style="display: none;" method="GET">
+                              @csrf
+                              @method('DELETE')
+                            </form>
+                            <button type="button" class="btn btn-danger" onclick="if(confirm('Are you sure? You want to delete this tim?')){
+                              event.preventDefault();
+                              document.getElementById('delete-tim-{{ $tim->id }}').submit();
+                            } else {
+                              event.preventDefault();
+                            }"><i class="fa fa-trash"></i> </button>
                       </td>
                     </tr>
                         @endforeach

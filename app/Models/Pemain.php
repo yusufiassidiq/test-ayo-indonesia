@@ -13,7 +13,8 @@ class Pemain extends Model
 
     protected $fillable = ['nama','tinggi','berat','posisi','nomor_punggung'];
     protected $table = 'pemains';
-
+    protected $dates = ['deleted_at'];
+    
     public function tim()
     {
         return $this->belongsTo(Tim::class);

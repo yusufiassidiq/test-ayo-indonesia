@@ -13,6 +13,7 @@ class Pencetak_Gol extends Model
 
     protected $fillable = ['waktu_gol','id_pencetak_gol'];
     protected $table = 'pencetak__gols';
+    protected $dates = ['deleted_at'];
 
     public function hasil()
     {
